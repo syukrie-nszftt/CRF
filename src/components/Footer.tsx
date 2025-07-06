@@ -6,7 +6,6 @@ import { cn } from '@/lib/utils';
 
 export function Footer() {
   const pathname = usePathname();
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 
   return (
     <footer className="w-full shrink-0 border-t bg-card py-4">
@@ -33,11 +32,6 @@ export function Footer() {
               Dynamic Website Form
             </Link>
         </div>
-        {basePath && (
-          <div className="mt-2 text-xs">
-            <p>Deployment Base Path: <code className="font-mono bg-muted px-1 py-0.5 rounded-sm">{basePath}</code></p>
-          </div>
-        )}
       </div>
     </footer>
   );
